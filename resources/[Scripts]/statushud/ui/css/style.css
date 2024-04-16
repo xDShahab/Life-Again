@@ -1,0 +1,721 @@
+
+
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Quicksand&display=swap);
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+
+#hud {
+    position: absolute;
+    right: 0;
+    font-family: Roboto;
+    margin-top: 1.1vw;
+    margin-right: 1vw;
+    width: 13vw;
+    height: 12.8vw;
+    opacity: 10;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#hud #logo {
+    width: 4vw;
+    right: 1vw;
+    transition: all ease 0.4s;
+    z-index: 1;
+    position: absolute;
+    border: 0.1vw solid #a00;
+    border-radius: 0.7vw;
+}
+
+#hud #mugshot {
+    position: relative;
+    float: left;
+    width: 3vw;
+    height: 3vw;
+    border: 0.2vw solid #000;
+}
+
+#hud #player {
+    position: relative;
+    margin-left: 0vw;
+    transition: all ease 0.3s;
+    width: 100%;
+}
+
+#hud #player-header {
+    position: relative;
+    width: 100%;
+    transition: all ease 0.3s;
+    margin-left: 0vw;
+    left: 0vw;
+    background:  #a8a6a64f;
+    border-radius: 0.2vw;
+    margin-bottom: 0.3vw;
+    height: 1.7vw;
+}
+
+#hud #player-ping {
+    position: relative;
+    float: left;
+    transition: all ease 0.3s;
+    width: auto;
+    height: 1.7vw;
+    border-radius: 0.2vw 0.2vw 0.2vw 0.2vw;
+}
+
+#hud #player-ping img {
+    position: relative;
+    margin-top: 0.13vw;
+    transition: all ease 0.3s;
+    margin-left: 0.25vw;
+    width: 1.5vw;
+    margin-right: 0.2vw;
+    height: 1.5vw;
+}
+
+#hud #player-ping span {
+    color: #58e72c;
+    font-size: 1vw;
+    top: 0.1vw;
+    transition: all ease 0.3s;
+    position: relative;
+    margin-right: 0.2vw;
+}
+
+#hud #server-name {
+    position: absolute;
+    margin-left: 3.5vw;
+    width: 9vw;
+    overflow: hidden;
+    transition: all ease 0.3s;
+    height: 1.7vw;
+    font-size: 1.1vw;
+    background-size: 1000% 100%;
+
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.2vw;
+    padding-left: 0.5vw;
+    border-radius: 0.2vw 0.2vw 0.2vw 0.2vw;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+#hud #server-name span {
+    position: relative;
+    font-size: 1.1vw;
+    animation: colorchange 2s infinite alternate;
+    color: red;
+    transition: all ease 0.3s;
+    color: #fff;
+    font-family: ubuntu;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+@keyframes background {
+    0% {
+        background-position: 0 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+#hud #player-name {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 9.3vw;
+    overflow: hidden;
+    height: 1.8vw;
+    margin-top: 0vw;
+    background:  #a8a6a64f;
+    transition: all ease 0.3s;
+    border-radius: 0.2vw 0.2vw 0.2vw 0.2vw;
+    color: #fff;
+}
+
+#hud #player-bc {
+    position: relative;
+    width: 100%;
+    height: 3.8vw;
+    transition: all ease 0.3s;
+}
+
+#hud #player-fullname {
+    position: relative;
+    width: 80%;
+    height: 1.7vw;
+    transition: all ease 0.3s;
+    overflow: hidden;
+    margin-left: 1.8vw;
+    font-size: 0.9vw;
+    font-family: Roboto-Regular;
+    text-align: left;
+    border-radius: 0.3vw 0.3vw 0.3vw 0.3vw;
+}
+
+#hud #player-fullname span {
+    position: relative;
+    transition: all ease 0.3s;
+    top: 0.20vw;
+}
+
+#hud #player-weapon-mug {
+    height: 3.8vw;
+    transition: all ease 0.3s;
+    position: absolute;
+    border-radius: 0.1vw 0.1vw 0.1vw 0.1vw;
+    border: 0.01vw solid  #a8a6a64f;
+    width: 3.8vw;
+}
+
+#hud .left-square-cash {
+    position: absolute;
+    width: 1.7vw;
+    top: -0.01vw;
+    transition: all ease 0.3s;
+    left: 0vw;
+    height: 1.8vw;
+    border-radius: 0.2vw 0.0vw 0vw 0.2vw;
+    background-color:  #a8a6a64f;
+}
+
+#hud .left-square-id {
+    position: absolute;
+    margin-top: 0;
+    width: 1.5vw;
+    background:  #a8a6a64f;
+    transition: all 0.3s ease 0s;
+    height: 1.7vw;
+    border-radius: 0vw 0 0 0vw;
+}
+
+#hud .left-square-hour {
+    position: absolute;
+    margin-top: 0;
+    width: 1.5vw;
+    background:  #a8a6a64f;
+    transition: all 0.3s ease 0s;
+    height: 1.65vw;
+    border-radius: 0vw 0 0 0vw;
+}
+
+#hud .player-hour {
+    position: absolute;
+    transition: all ease 0.3s;
+    width: 3.15vw;
+    top: 2.1vw;
+    text-align: center;
+    left: 0;
+    height: 1.8vw;
+    border-radius: 0.3vw 0.3vw 0.3vw 0.3vw;
+    background-color:  #a8a6a64f;
+}
+
+#hud .player-id {
+    position: absolute;
+    width: 3.15vw;
+    transition: all 0.3s ease 0s;
+    text-align: center;
+    left: 0vw;
+    height: 1.8vw;
+    border-radius: 0.2vw 0.2vw 0.2vw 0.2vw;
+    background-color:  #a8a6a64f;
+}
+
+#hud .left-square-cash img {
+    position: absolute;
+    transition: all ease 0.3s;
+    width: 1.3vw;
+    height: 1.3vw;
+    margin-top: 0.2vw;
+    margin-left: 0.2vw;
+}
+
+#hud .left-square-id img {
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    width: 1vw;
+    height: 1vw;
+    top: 0.3vw;
+    right: 0.15vw;
+}
+
+#hud .left-square-hour img {
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    margin-top: 0.3vw;
+    margin-left: 0.3vw;
+    transition: all ease 0.3s;
+}
+
+#hud .left-square-user {
+    position: absolute;
+    transition: all ease 0.3s;
+    margin-top: 0vw;
+    width: 1.7vw;
+    height: 1.8vw;
+    border-radius: 0.2vw 0.0vw 0.0vw 0.2vw;
+    background-color:  #a8a6a64f;
+}
+
+#hud .left-square-user img {
+    position: absolute;
+    width: 1.3vw;
+    transition: all ease 0.3s;
+    height: 1.3vw;
+    margin-top: 0.25vw;
+    margin-left: 0.3vw;
+}
+
+#hud #player-cash {
+    width: 9.3vw;
+    position: absolute;
+    overflow: hidden;
+    background:  #a8a6a64f;
+    transition: all ease 0.3s;
+    border-radius: 0.2vw 0.2vw 0.2vw 0.2vw !important;
+    height: 1.8vw;
+    border-radius: 0 0.3vw 0.3vw 0;
+    right: 0;
+    top: 2.1vw;
+}
+
+#hud #player-cash-texte {
+    position: relative;
+    color: #58e72c;
+    transition: all ease 0.3s;
+    font-family: fantasy;
+    top: 0.1vw;
+    font-size: 1.1vw;
+    margin-left: 1.8vw;
+}
+
+#hud #hour {
+    position: relative;
+    width: 100%;
+    height: 1.7vw;
+    transition: all ease 0.3s;
+    font-size: 0.9vw;
+    color: #fff;
+    top: 0.2vw;
+}
+
+#hud #source {
+    position: relative;
+    width: 100%;
+    height: 1.7vw;
+    top: 0vw;
+    transition: all ease 0.3s;
+    font-size: 1.1vw;
+    color: #fff;
+    text-align: left;
+}
+
+#hud #player-jobo {
+    position: relative;
+    float: left;
+    left: 0vw;
+    top: 3.9vw;
+    transition: all ease 0.3s;
+    width: 100%;
+}
+
+#hud #player-gang {
+    position: relative;
+    float: left;
+    left: 0vw;
+    transition: all ease 0.3s;
+    top: 3.6vw;
+    margin-top: 0.2vw;
+    width: 100%;
+}
+
+#hud .left-square-info {
+    position: relative;
+    float: left;
+    transition: all ease 0.3s;
+    margin-top: 0.5vw;
+    width: 5.5vw;
+    height: 1.7vw;
+    border-radius: 0.2vw 0 0 0.2vw;
+    background-color:  #a8a6a64f;
+}
+
+#hud .right-square-info {
+    position: relative;
+    width: 5.0vw;
+    height: 1.7vw;
+    margin-top: 0.5vw;
+    transition: all ease 0.3s;
+    margin-left: 8vw;
+    border-radius: 0 0.2vw 0.2vw 0;
+    background-color:  #a8a6a64f;
+}
+
+#hud .center-info {
+    position: relative;
+    float: left;
+    transition: all ease 0.3s;
+    margin-top: 0.5vw;
+    margin-left: 0.25vw;
+    width: 2vw;
+    height: 1.7vw;
+    border-radius: 0.2vw 0.2vw 0.2vw 0.2vw;
+    background-color:  #a8a6a64f;
+}
+
+#hud #health {
+    background: linear-gradient(45deg, #ee0505 0, #960f0fc4 100%);
+    height: 100%;
+    float: left;
+    width: 100%;
+    transition: all ease 0.3s;
+    border-radius: 0.2vw;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+}
+#hud #armor {
+    float: left;
+    height: 100%;
+    transition: all ease 0.3s;
+    width: 100%;
+    background: linear-gradient(45deg, #8a8988 0, #333333 100%);
+    border-radius: 0.2vw;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+}
+#hud #hunger {
+    height: 100%;
+    width: 100%;
+    transition: all ease 0.3s;
+    background: linear-gradient(45deg, #964a03 0, #ff7b00 100%);
+    float: right;
+    border-radius: 0.2vw;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+}
+#hud #thirst {
+    transition: all ease 0.3s;
+    float: right;
+    width: 100%;
+    float: left;
+    height: 100%;
+    background: linear-gradient(45deg, #020c6d 0, #0485cf 100%);
+    border-radius: 0.2vw;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+}
+
+#hud #job-name {
+    position: relative;
+    color: #fff;
+    transition: all ease 0.3s;
+    text-align: center;
+    font-size: 0.9vw;
+}
+
+#hud #job-name span {
+    position: relative;
+    top: 0.2vw;
+    transition: all ease 0.3s;
+}
+
+#hud #job-img img {
+    position: relative;
+    top: 0.1vw;
+    left: 0.25vw;
+    transition: all ease 0.3s;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#hud #job-grade {
+    position: relative;
+    transition: all ease 0.3s;
+    color: #fff;
+    text-align: center;
+    font-size: 0.9vw;
+}
+
+#hud #job-grade span {
+    position: relative;
+    transition: all ease 0.3s;
+    top: 0.2vw;
+}
+
+#hud #gang-name {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    transition: all ease 0.3s;
+    font-size: 0.9vw;
+}
+
+#hud #gang-name span {
+    position: relative;
+    transition: all ease 0.3s;
+    top: 0.2vw;
+}
+
+#hud #gang-img img {
+    position: relative;
+    top: 0.1vw;
+    left: 0.25vw;
+    width: 1.5vw;
+    transition: all ease 0.3s;
+    height: 1.5vw;
+}
+
+#hud #gang-grade {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    transition: all ease 0.3s;
+    font-size: 0.9vw;
+}
+
+#hud #gang-grade span {
+    position: relative;
+    top: 0.2vw;
+    transition: all ease 0.3s;
+}
+
+.ticktok {
+    animation: ticktok 1s infinite;
+}
+
+@keyframes ticktok {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes colorchange {
+    0% {
+        color: #02ee16;
+    }
+    25% {
+        color: #02ee16;
+    }
+    50% {
+        color: #00e8f9;
+    }
+    75% {
+        color: #02ee16;
+    }
+    100% {
+        color: #02ee16;
+    }
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block;
+}
+
+.cp-none {
+    clip-path: none;
+}
+
+.l-cp {
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+}
+
+.r-cp {
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#hud .left-md1 {
+    position: absolute;
+    float: left;
+    width: 1.7vw;
+    top: 4vw;
+    height: 1.7vw;
+    transition: all ease 0.3s;
+    border-radius: 0.3vw 0 0 0.3vw;
+    background-color: RGBA(211, 47, 47, 0.7);
+    border-radius: 0.2vw 0vw 0vw 0.2vw;
+}
+#hud .left-md1 img {
+    position: relative;
+    width: 1.8vw;
+    left: -0.05vw;
+    padding: 0.2vw;
+    top: 0vw;
+    transition: all ease 0.3s;
+    height: 1.7vw;
+}
+#hud .left-md2 {
+    position: absolute;
+    float: left;
+    width: 1.7vw;
+    top: 6vw;
+    height: 1.7vw;
+    border-radius: 0.3vw 0 0 0.3vw;
+    transition: all ease 0.3s;
+    background-color: RGBA(211, 47, 47, 0.7);
+    border-radius: 0.2vw 0vw 0vw 0.2vw;
+}
+#hud .left-md2 img {
+    position: relative;
+    width: 1.7vw;
+    transition: all ease 0.3s;
+    height: 1.7vw;
+    padding: 0.1vw;
+}
+#hud .right-md1 {
+    position: absolute;
+    width: 1.7vw;
+    top: 4vw;
+    right: 0;
+    border-radius: 0.2vw 0.2vw 0.2vw 0.2vw;
+    height: 1.7vw;
+    transition: all ease 0.3s;
+    margin-left: 13vw;
+    border-radius: 0 0.3vw 0.3vw 0;
+    background-color: RGBA(211, 47, 47, 0.7);
+}
+#hud .right-md1 img {
+    position: relative;
+    padding: 0.1vw;
+    transition: all ease 0.3s;
+    width: 1.7vw;
+    height: 1.7vw;
+    float: right;
+}
+#hud .right-md2 {
+    position: absolute;
+    width: 1.7vw;
+    top: 6vw;
+    right: 0;
+    border-radius: 0.2vw 0.2vw 0.2vw 0.2vw;
+    height: 1.7vw;
+    margin-left: 13vw;
+    border-radius: 0 0.2vw 0.2vw 0;
+    transition: all ease 0.3s;
+    background-color: RGBA(211, 47, 47, 0.7);
+}
+#hud .right-md2 img {
+    position: relative;
+    padding: 0.1vw;
+    width: 1.7vw;
+    height: 1.7vw;
+    transition: all ease 0.3s;
+    float: right;
+}
+#hud .left-status1 {
+    position: absolute;
+    top: 5.1vw;
+    left: 0;
+    float: left;
+    margin-top: 0.5vw;
+    width: 13vw;
+    transition: all ease 0.3s;
+    height: 1.0vw;
+    border-radius: 0.2vw;
+    background: linear-gradient(45deg, #ffffff4d 0, #ffffff4d 100%);
+}
+#hud .left-status2 {
+    position: absolute;
+    top: 6.4vw;
+    left: 0;
+    float: left;
+    margin-top: 0.5vw;
+    width: 6.4vw;
+    transition: all ease 0.3s;
+    height: 1vw;
+    border-radius: 0.2vw;
+    background: linear-gradient(45deg, #00f7ff4d 0, #53f9ff4d 100%);
+}
+#hud .right-status1 {
+    position: absolute;
+    margin-top: 1vw;
+    top: 3.3vw;
+    right: 0;
+    transition: all ease 0.3s;
+    width: 13vw;
+    z-index: 2;
+    border-radius: 0.2vw;
+    height: 1vw;
+    background: linear-gradient(45deg, #ff00004d 0, #aa00004d 100%);
+}
+#hud .right-status2 {
+    position: absolute;
+    margin-top: 0;
+    top: 6.9vw;
+    right: 0;
+    transition: all ease 0.3s;
+    z-index: 2;
+    width: 6.4vw;
+    border-radius: 0.2vw;
+    height: 1vw;
+    background: linear-gradient(45deg, #ff8c204d 0, #ff7b004d 100%);
+}
+
+
+#hud .avatar-steam {
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 2vw;
+    right: 1vw;
+    border: 0.1vw solid RGBA(120,144,156,0.9);
+}
+
+@keyframes milad {
+    0% {
+        border-top: 0.2vw solid #0ff;
+        border-right: 0.2vw solid #15ff00;
+        border-bottom: 0.2vw solid #f38d07;
+        border-left: 0.2vw solid #fe0;
+    }
+    100% {
+        border-right: 0.2vw solid #0ff;
+        border-bottom: 0.2vw solid #15ff00;
+        border-left: 0.2vw solid #f38d07;
+        border-top: 0.2vw solid #fe0;
+    }
+}
+
+.khat {
+    position: absolute;
+    top: 0vw;
+    width: 0;
+    border-right: 0.01vw solid RGBA(120,144,156,1);
+    height: 3.9vw;
+    left: 3.4vw;
+}

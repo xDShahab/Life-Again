@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="ui.js"></script>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style id="applicationStylesheet" type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+* {font-family: Poppins;}
+	.mediaViewInfo {
+		--web-view-name: Canvas;
+		--web-view-id: Canvas;
+		--web-scale-to-fit: true;
+		--web-scale-to-fit-type: width;
+		--web-enable-scale-up: true;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Canvas;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	.Canvas_Class {
+		position: absolute;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(0,0,0,0);
+		overflow: hidden;
+		--web-view-name: Canvas;
+		--web-view-id: Canvas;
+		--web-scale-to-fit: true;
+		--web-scale-to-fit-type: width;
+		--web-enable-scale-up: true;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	.container {
+		position: absolute;
+		width: 211px;
+		height: 39px;
+		left: 855px;
+		top: 1016px;
+		overflow: visible;
+	}
+	.bg_Class {
+		position: absolute;
+		background-color: rgba(221, 7, 7, 0.644);
+		box-shadow: 0 0 1.65vw 0 rgb(202, 5, 5);
+		width: 211px;
+		height: 39px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.rechts_Class {
+		position: absolute;
+		width: 55px;
+		height: 25px;
+		left: 138px;
+		top: 8px;
+		overflow: visible;
+	}
+	.Ellipse_2_Class {
+		fill: rgba(163, 32, 32, 0);
+	}
+	.Ellipse_2 {
+		position: absolute;
+		overflow: visible;
+		width: 25px;
+		height: 25px;
+		left: 30px;
+		top: 0px;
+	}
+	#Ebene_11 {
+		position: absolute;
+		width: 12px;
+		height: 14px;
+		left: 37px;
+		top: 5px;
+		overflow: visible;
+	}
+	.Ellipse_2_l_Class {
+		fill: rgba(33, 33, 33, 0);
+	}
+	.Ellipse_2_l {
+		position: absolute;
+		overflow: visible;
+		width: 25px;
+		height: 25px;
+		left: 0px;
+		top: 0px;
+	}
+	#unlocked {
+		position: absolute;
+		width: 12px;
+		height: 14px;
+		left: 6px;
+		top: 5px;
+		overflow: visible;
+	}
+	.n_00_Class {
+		left: 90px;
+		top: 4px;
+		position: absolute;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		line-height: 55.880001068115234px;
+		margin-top: -20.23166561126709px;
+		text-align: center;
+		font-family: Poppins-Medium;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15.416669845581055px;
+		color: rgb(255, 255, 255);
+	}
+	.KMH_Class {
+		left: 93px;
+		top: 22px;
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		white-space: nowrap;
+		line-height: 55.880001068115234px;
+		margin-top: -23.706665515899658px;
+		text-align: right;
+		font-family: Poppins-Medium;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 8.466670036315918px;
+		color: rgba(255,255,255,1);
+	}
+	.tank_Class {
+		position: absolute;
+		width: 47px;
+		height: 25px;
+		left: 18px;
+		top: 7px;
+		overflow: visible;
+	}
+	.n_9_Class {
+		left: 31px;
+		top: 8px;
+		position: absolute;
+		overflow: visible;
+		width: 17px;
+		white-space: nowrap;
+		line-height: 55.880001068115234px;
+		margin-top: -21.59000062942505px;
+		text-align: right;
+		font-family: Poppins-Regular;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12.699999809265137px;
+		color: rgb(255, 255, 255);
+	}
+	.Ellipse_2_r_Class {
+		fill: rgba(33, 33, 33, 0);
+	}
+	.Ellipse_2_r {
+		position: absolute;
+		overflow: visible;
+		width: 25px;
+		height: 25px;
+		left: 0px;
+		top: 0px;
+	}
+	.gas-pump-solid_Class {
+		position: absolute;
+		width: 14px;
+		height: 14px;
+		left: 6px;
+		top: 6px;
+		overflow: visible;
+	}
+</style>
+<script id="applicationScript" type="text/javascript" src="rescale.js"></script>
+</head>
+<body>
+<div id="Canvas" class="Canvas_Class">
+	<div class="container noselect">
+		<img class="bg_Class" >
+			
+		<div class="rechts_Class">
+
+			<svg class="Ellipse_2">
+				<ellipse class="Ellipse_2_Class" rx="12.5" ry="12.5" cx="12.5" cy="12.5">
+				</ellipse>
+			</svg>
+				
+			<svg class="Ellipse_2_l">
+				<ellipse class="Ellipse_2_l_Class" rx="12.5" ry="12.5" cx="12.5" cy="12.5">
+				</ellipse>
+			</svg>
+
+			<div id="icon1" class="icon1">
+						<img id="Ebene_11" src="off.png">
+					</div>
+					<div id="icon2" class="icon2">
+						<img id="unlocked" src="unlocked.png">
+					</div>
+				
+		</div>
+		<div class="n_00_Class">
+			<p class="text" id="kmh">0</p>
+		</div>
+		<div class="KMH_Class">
+			<span>KM/H</span>
+		</div>
+		<div class="tank_Class">
+			<div class="n_9_Class">
+				<p class="text" id="tank">0 L</p>
+			</div>
+			<svg class="Ellipse_2_r">
+				<ellipse class="Ellipse_2_r_Class" rx="12.5" ry="12.5" cx="12.5" cy="12.5">
+				</ellipse>
+			</svg>
+			<img class="gas-pump-solid_Class" src="https://https://cdn.discordapp.com/icons/927570401113038908/a5a7daa38862d5677cba716d4388bc77.png?size=1024.com/attachments/936136406668034058/936139945259708416/gas-pump-solid2.png">
+				
+		</div>
+	</div>
+</div>
+</body>
+</html>

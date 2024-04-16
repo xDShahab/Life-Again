@@ -1,0 +1,99 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>LifeAgain</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jadgal5190/statushud/styxzle89.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jadgal5190/statushud/stzxyle2.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<style>
+		html {
+			overflow: hidden;
+		}
+	</style>
+</head>
+
+<body style="background-color: rgba(0,0,0,0);display:block;">
+	<div id="hud" style="opacity: 1.0;">
+		<div id="player-header" style="opacity:1;">
+			<div id="player-ping"><img src="./img/logo/wifi_g.png" /><span name="ping" id="ping">20</span></div>
+			<div id="server-name"><span>LifeAgain</span></div>
+
+		</div>
+
+		<div id="player-bc">
+			<div id="player" class="">
+				<div class="khat"></div>
+				<div id="player-name">
+					<div class="left-square-user"><img src="./img/logo/user.png" /></div>
+					<div id="player-fullname"><span>Loading</span></div>
+				</div>
+				<div id="player-cash"><span id="player-cash-texte">$0</span>
+					<div class="left-square-cash"><img src="./img/logo/money_bag.png" /></div>
+				</div>
+				<div class="player-id"><span id="source">0</span></div>
+				<div class="player-hour"><span class="time" id="hour">12:12</span></div>
+
+			</div>
+			<div class="right-md1" style="display: none;"><img id="health-img" src="./img/logo/heart.png" /></div>
+			<div class="right-status1">
+				<div id="health" style="padding-top: 0.13vw;color:rgba(255, 255, 255, 0.9);"><i class="fa fa-heart"
+						style="margin-left: calc(12.2vw / 2);font-size: 0.8vw;"></i></div>
+			</div>
+			<div class="right-md2" style="display: none;"><img id="armor-img" src="./img/logo/armor.png" /></div>
+			<div class="left-status1">
+				<div id="armor" style="padding-top: 0.10vw;color:rgba(0, 0, 0, 0.5);"><i class="fa fa-shield-alt"
+						style="margin-left: calc(12.2vw / 2);font-size: 0.8vw;"></i></div>
+			</div>
+
+
+			<div class="right-status2">
+				<div id="hunger" style="padding-top: 0.13vw;color:rgba(255, 255, 255, 0.9);"><i class="fa fa-utensils"
+						style="font-size: 0.8vw;position: absolute;left: calc(5.6vw / 2);"></i></div>
+			</div>
+			<div class="left-status2">
+				<div id="thirst" style="padding-top: 0.15vw;color:rgba(255, 255, 255, 0.9);"><i class="fa fa-tint"
+						style="margin-left: calc(5.6vw / 2);font-size: 0.8vw;"></i></div>
+			</div>
+		</div>
+		<div id="player-jobo" style="display:noasdne;opacity: 1;">
+			<div id="job-name" class="left-square-info"><span>Unemployed</span></div>
+			<div id="job-img" class="center-info"><img src="./img/logo/jobs/nojob.png" /></div>
+			<div id="job-grade" class="right-square-info"><span>Unemployed</span></div>
+		</div>
+		<div id="player-gang" style="displayasd:none;opacity: 1;">
+			<div id="gang-name" class="left-square-info"><span>Unemployed</span></div>
+			<div id="gang-img" class="center-info"><img src="./img/logo/gangs/nogang.png" /></div>
+			<div id="gang-grade" class="right-square-info"><span>Unemployed</span></div>
+		</div>
+	</div>
+
+
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script
+		src="https://cdn.jsdelivr.net/gh/cferdinandi/saferInnerHTML@1/dist/saferInnerHTML.polyfills.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+	<script src="js/app.js" type="text/javascript"></script>
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,136 @@
+@font-face {
+    font-family: bankgothic;
+    src: url('../fonts/bankgothic.ttf');
+}
+
+@font-face {
+    font-family: pcdown;
+    src: url('../fonts/pdown.ttf');
+}
+
+.menu {
+    background-color: rgb(41 41 41 / 78%);
+    /* background-color: rgb(0 0 0 / 78%); */
+    border-radius: 2px;
+    font-family: Verdana;
+    min-width: 400px;
+    color: #fff;
+    /* box-shadow: 0px 0px 50px 0px #000; */
+    position: absolute;
+    /* border: 2px solid #d5a700; */
+    /* padding: 5px; */
+    border-radius: 15px;
+}
+
+.menu.align-left {
+    left: 40;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.menu.align-top-left {
+    left: 40;
+    top: 40;
+}
+
+.menu.align-top {
+    left: 50%;
+    top: 40;
+    transform: translate(-50%, 0);
+}
+
+.menu.align-top-right {
+    left: 40;
+    top: 40;
+}
+
+.menu.align-right {
+    right: 40;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.menu.align-bottom-right {
+    left: 40;
+    top: 40;
+}
+
+.menu.align-bottom {
+    left: 40;
+    top: 40;
+}
+
+.menu.align-bottom-left {
+    left: 40;
+    top: 40;
+}
+
+.menu.align-center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu .head {
+    /* border-radius: 20px 20px 0px 0px; */
+    text-align: center;
+    color: black;
+    /*     color: white; */
+    background-color: #ff0000a6;
+    font-size: 130%;
+    /* height: 90px; */
+    line-height: 40px;
+    padding: 25px;
+    font-family: cursive;
+    font-weight: bold;
+    /* border-radius: 4px; */
+
+    border: 2px solid #000000e6;
+
+    border-bottom: 0px solid black;
+}
+
+.menu .menu-items {
+    max-height: 600px;
+    overflow-y: hidden;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 3px;
+    /*     border: 2px solid #ff8605ad; */
+    background-color: #c5110bc7;
+    /* border-top: 1px solid black; */
+    border: 2px solid #000000e6;
+}
+
+.menu .menu-items .menu-item {
+    height: 40px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.1);
+    -box-shadow: inset 1px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    height: 32px;
+    line-height: 32px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    transition: 750ms;
+    background-color: #000000b8;
+    margin-top: 5px;
+    padding: 1px;
+    border-radius: 4px;
+}
+
+.menu .menu-items .menu-item.selected {
+    background-color: #e24b00;
+    padding: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #000000e6;
+    animation-name: select;
+    animation-duration: 400ms;
+}
+
+@keyframes select {
+    0% {background-color: #000000e6; border: 2px solid #000000e6;}
+    100% {background-color: #e24b00; border: 2px solid #000000e6;}
+}
+

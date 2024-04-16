@@ -1,0 +1,16 @@
+Locales['sv'] = {
+	['shop_robbery'] = 'butikrån',
+	['press_to_rob'] = 'tryck ~INPUT_CONTEXT~ för att ~o~råna %s',
+	['robbery_timer'] = 'butiksrån: %s sekunder kvarstår',
+	['recently_robbed'] = 'denna butik har nyligen rånats, du måste vänta %s sekunder!',
+	['rob_in_prog'] = 'Det är ett pågående rån vid %s',
+	['started_to_rob'] = 'du började att råna %s, gå inte för långt från butiken!',
+	['alarm_triggered'] = '~o~Larmet har utlösts',
+	['robbery_complete'] = 'Rånet är avklarat, du stal %s SEK!',
+	['robbery_complete_at'] = 'Ett rån lyckades vid %s',
+	['robbery_cancelled'] = 'rånet har avbrutits!',
+	['robbery_cancelled_at'] = 'Rånet vid %s har avbrutits!',
+	['min_police'] = 'det måste vara minst %s poliser inne för att du ska kunna ~o~råna butiker.',
+	['robbery_already'] = 'Ett rån pågår redan.',
+	['no_threat'] = 'du kan inte hota utan ett vapen',
+}

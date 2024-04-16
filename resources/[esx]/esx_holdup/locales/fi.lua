@@ -1,0 +1,16 @@
+Locales['fi'] = {
+  ['shop_robbery'] = 'kaupan ryöstö',
+  ['press_to_rob'] = 'paina ~INPUT_CONTEXT~ ~o~ryöstääksesi kaupan %s',
+  ['robbery_timer'] = 'kauppa ryöstö: %s sekunttia jäljellä',
+  ['recently_robbed'] = 'tämä kauppa ryöstettiin vasta. Odota %s sekunttia että voit ryöstää.',
+  ['rob_in_prog'] = 'ryöstö menossa kohteessa %s',
+  ['started_to_rob'] = 'sinä aloitit ryöstään %s',
+  ['alarm_triggered'] = 'hälyytys laukaistu!',
+  ['robbery_complete'] = 'Ryöstö onnistui, sinä ~o~varastit $%s',
+  ['robbery_complete_at'] = 'Ryöstö ohitse kohteessa %s',
+  ['robbery_cancelled'] = 'ryöstö keskeytyi!',
+  ['robbery_cancelled_at'] = 'Ryöstö kohteessa %s keskeytyi!',
+  ['min_police'] = 'kaupungissa pitää olla vähintää %s poliisia paikalla ryöstön aloitukseen.',
+  ['robbery_already'] = 'Ryöstö on jo menossa.',
+  ['no_threat'] = 'you do not pose a threat to the store keeper',
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Athiti&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/ui.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+</head>
+
+<body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="locales/en.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/inventory.js"></script>
+    <script>
+        function setInputFilter(textbox, inputFilter) {
+            ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
+                textbox.addEventListener(event, function() {
+                    if (inputFilter(this.value)) {
+                        this.oldValue = this.value;
+                        this.oldSelectionStart = this.selectionStart;
+                        this.oldSelectionEnd = this.selectionEnd;
+                    }else if(this.hasOwnProperty("oldValue")){
+                        this.value = this.oldValue;
+                        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                    };
+                });
+            });
+        }
+        $(function () {
+            $('#modal_count').modal({
+                endingTop: '40%',
+                onOpenStart: function(){
+                    $('#txt_count').val("");
+                    $("#text_result").hide();
+                    setTimeout(function() { 
+                        var CountInput = $('#txt_count');
+                        CountInput.focus();
+                        $("#item-submit").show();
+                        // var strLength = CountInput.val().length * 2;
+                        // CountInput.focus();
+                        // CountInput[0].setSelectionRange(strLength, strLength);
+                }, 100);
+                }
+            });
+            $('#modal_give').modal({
+                endingTop: '40%'
+            });
+            $('#modal_remote').modal({
+                endingTop: '40%'
+            });
+            setInputFilter(document.getElementById("txt_count"), function(value) {
+                return /^\d*\.?\d*$/.test(value);
+            });
+
+            $('#txt_count').on("keyup", function(e) {
+                if (e.keyCode == 13) {
+                    $("#item-submit").trigger('click');
+                    $('.modal').modal('close');
+                };
+            });
+        });
+    </script>
+
+    <div id="modal_give" class="modal" style="width: 400px;">
+        <div class="modal-content">
+            
+        </div>
+        <div class="modal-footer">
+            <a class="modal-close waves-effect waves-red btn-flat white-text">Cancel</a>
+        </div>
+    </div>
+
+    <div id="modal_count" class="modal" style="width: 400px;">
+        <div class="modal-content">
+            <input placeholder="Count" id="txt_count" type="number">
+            <div class="red-text" id="text_result"></div>
+        </div>
+        <div class="modal-footer">
+            <a id="item-submit" class="waves-effect waves-green btn-flat white-text">OK</a>
+            <a class="modal-close waves-effect waves-red btn-flat white-text">Cancel</a>
+        </div>
+    </div>
+
+    <div class="ui faster">
+        <div class="middle">
+            <div class="inventory">
+                <div class="row" style="margin: 0;">
+                    <div id="col-inventory" class="col s6" style="padding: 0;">
+                        <div class="header" align="left">
+                            Storage compartment <span id="playername"></span>
+                            <div class="key-button" id="sort_item">
+                                <a class="btn-floating btn-large btn-flat waves-effect waves-light white-text" data-button="inventory_all"><i class="material-icons">work</i></a>
+                                <a class="btn-floating btn-large btn-flat waves-effect waves-light white-text" data-button="inventory_clothes"><i class="material-icons">accessibility</i></a>
+                                <a class="btn-floating btn-large btn-flat waves-effect waves-light white-text" data-button="inventory_food"><i class="material-icons">fastfood</i></a>
+                                <a class="btn-floating btn-large btn-flat waves-effect waves-light white-text" data-button="inventory_key"><i class="material-icons">vpn_key</i></a>
+                                <a class="btn-floating btn-large btn-flat waves-effect waves-light white-text" data-button="inventory_weapon"><i class="material-icons">warning</i></a>
+                            </div>
+                        </div>
+                        <div id="playerInventory" class="row" style="margin:0;padding:0;">
+                        </div>
+                    </div>
+                    <div id="col-other" class="col s6" style="display:none;padding:0;">
+                        <div class="header">
+                            <span id="info-div"></span>
+                        </div>
+                        <div id="inventory_trunk_loading">
+
+                        </div>
+                        <div id="otherInventory" class="row" style="margin:0;padding:0;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

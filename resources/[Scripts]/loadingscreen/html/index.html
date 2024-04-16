@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- BACKGROUND VIDEO -->
+    <div id="overlay">
+        <div class="fullscreen-bg">
+            <video id="leson" autoplay loop class="fullscreen-bg__video" height="100%" width="130%"
+                src="https://cdn.discordapp.com/attachments/1195164464220229723/1211767369219711056/Loading.mp4?ex=65ef654e&is=65dcf04e&hm=bccb911aaf1084575e4ad8b983ea9c97dac6cc1c7f413bd95568b05e68656da3&"
+                frameborder="0"></video>
+            <!-- <video id="leson" loop muted autoplay class="fullscreen-bg__video" src="./bgvideo.mp4"></video> -->
+        </div>
+    </div>
+    <!-- END BG VIDEO -->
+    <!-- LOGO -->
+    <img src="assets/logo.png" alt="" />
+    <!-- END LOGO -->
+    <h1 class="enable_music">Press <strong>SPACEBAR</strong> to turn off music</h1>
+    <!-- <audio id="leson" src="assets/music.mp3" autoplay="true" hidden="true" loop="true"> -->
+    <script>
+
+        window.addEventListener("load", (e) => {
+
+            var myAudio = document.getElementById("leson");
+            myAudio.play();
+
+        });
+
+        var play = false;
+        var myAudio = document.getElementById("leson");
+
+        myAudio.volume = 0.3;
+
+        function onKeyDown(event) {
+            switch (event.keyCode) {
+                case 32: //SpaceBar
+                    if (play) {
+                        myAudio.volume = 0
+                        play = false;
+                    } else {
+                        myAudio.volume = 0.3
+                        play = true;
+                    }
+                    break;
+            }
+            return false;
+        }
+
+        window.addEventListener("keydown", onKeyDown, false);
+
+
+
+    </script>
+    <!-- BG AUDIO -->
+    <!-- END BG AUDIO -->
+    <!-- LOADING BAR -->
+    <div class="loadbar">
+        <div class="progressBar"></div>
+    </div>
+    <script src="js/main.js"></script>
+    <!-- END LOADING BAR -->
+</body>
+
+</html>

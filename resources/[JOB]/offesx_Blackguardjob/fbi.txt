@@ -1,0 +1,23 @@
+INSERT INTO `addon_account` (name, label, shared) VALUES
+	('society_Blackguard', 'Blackguard Department', 1)
+;
+
+INSERT INTO `datastore` (name, label, shared) VALUES
+	('society_Blackguard', 'Blackguard Department', 1)
+;
+
+INSERT INTO `addon_inventory` (name, label, shared) VALUES
+	('society_Blackguard', 'Blackguard Department', 1)
+;
+
+INSERT INTO `jobs` (name, label) VALUES
+	('Blackguard','Blackguard')
+;
+
+INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
+	('Blackguard',0,'agent','mamor',5000,'{}','{}'),
+	('Blackguard',1,'special','mamor vizhe',7000,'{}','{}'),
+	('Blackguard',2,'supervisor','sarparast',9000,'{}','{}'),
+	('Blackguard',3,'assistant','moaven',9500,'{}','{}'),
+	('Blackguard',4,'boss','chief',10000,'{}','{}')
+;

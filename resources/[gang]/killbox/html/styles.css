@@ -1,0 +1,25 @@
+body {
+    margin-top: 300px;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+.toast {
+    width: 0px;
+    float: right;
+}
+
+
+
+.Kill {
+    background-color: rgba(20, 20, 20, 0.842);
+    color: #fff;
+    padding: 3px 3px 3px 3px;
+    border-style: groove;
+}
+
+
+
+
+
+
