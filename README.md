@@ -11,5 +11,3 @@ In Resource Bedon Anti Cheat Hast Va File Hai Anti Cheat Be Sorat Joda Dakhel Gi
 ## 🗯️ Nokte : Agar Mikhaid Chizi Ro Dar Github Pub Konid LotfanFile .rar Nazarid Mamnon
 
 ## 💠 SQL : https://mega.nz/file/4wFmhRCY#_v2RRkGUUjUVMQHWsd1YsBq2vu8vaHgRBy9zuDLtLGU
-
-![](https://img.shields.io/github/downloads/xDShahab/Life-Again/total?logo=github)
